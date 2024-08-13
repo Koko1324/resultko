@@ -11,7 +11,7 @@ logo = Image.open("logo.png")
 col1, col2, col3, col4 = st.columns([1,1,1,1])
 
 with col3,col4:
-    print('설명')#설명
+    st.write('설명')#설명
 
 with col1:
     st.write("코스"+'abc')#abc에 'A','B','C'중 하나 저장
