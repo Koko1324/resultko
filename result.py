@@ -1,6 +1,7 @@
 #작은 따옴표는 변수임
 import streamlit as st
 from PIL import Image
+
 # 페이지 레이아웃 설정
 st.set_page_config(layout="wide")
 
@@ -10,8 +11,7 @@ logo = Image.open("logo.png")
 # 헤더 섹션을 만들기 위해 열(column)을 나눕니다.
 header_col1, header_col2, header_col3 = st.columns([1,1,4])
 
-#레이아웃 설정
-col4, col5, col6 = st.columns([1,1,1])
+
 
 with header_col1:
     # 첫 번째 열에 로고 이미지를 추가합니다.
@@ -27,20 +27,17 @@ with header_col3:
         설명
         ''')
         #st.image('필요할 시 이미지 넣고 필요 없으면 지우기')
+def day():
+    #일차 저장
+    a = 1
+    input_by_user = 6#실제로 입력받은 값 저장해야 함
+    #결과 자세히 보기 눌렀을 때
+    for i in range(input_by_user):
+        with st.container(border = True):
+            st.write("{}일차".format(a))#a(int)에 몇일차인지 입력
+            st.write('장소 : ')
+            #st.image('장소이미지')
+            st.write('장소 설명 : ')
+        a += 1
 
-
-with col4:
-    st.write('a1234'+"일차")#a1234에 몇일차인지 입력
-    st.write('장소')
-    #st.image('장소이미지')
-    st.write('장소 설명')
-with col5:
-    st.write('a1234'+"일차")#a1234에 몇일차인지 입력
-    st.write('장소')
-    #st.image('장소이미지')
-    st.write('장소 설명')
-with col6:
-    st.write('a1234'+"일차")#a1234에 몇일차인지 입력
-    st.write('장소')
-    #st.image('장소이미지')
-    st.write('장소 설명')
+day()
